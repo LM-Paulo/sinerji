@@ -28,7 +28,7 @@ public class PersonEntity {
     @NotEmpty
     private String sex;
 
-    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL)
+    @OneToOne
     private AddressEntity address;
 
     public void setEntity(PersonDto personDto) {

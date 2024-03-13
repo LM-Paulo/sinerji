@@ -52,7 +52,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public void createAddress(PersonDto personDto) {
+    public void createPerson(PersonDto personDto) {
         PersonEntity personEntity = new PersonEntity();
         personEntity.setEntity(personDto);
         repository.save(personEntity);

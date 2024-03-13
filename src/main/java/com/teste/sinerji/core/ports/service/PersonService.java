@@ -16,7 +16,7 @@ public interface PersonService {
 
     void update(Long id, PersonDto personDto) throws BusinessException;
 
-    void createAddress(PersonDto personDto);
+    void createPerson(PersonDto personDto);
 
     Page<PersonEntity> listAllPerson(Sort.Direction direction, String properties, Integer page, Integer size);
 }

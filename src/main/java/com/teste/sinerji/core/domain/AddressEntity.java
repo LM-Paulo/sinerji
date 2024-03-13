@@ -36,7 +36,6 @@ public class AddressEntity {
     private String zipCode;
 
     @OneToOne
-    @JoinColumn(name = "person_id")
     private PersonEntity person;
 
 
