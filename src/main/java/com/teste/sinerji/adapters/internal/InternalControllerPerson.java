@@ -43,7 +43,7 @@ public class InternalControllerPerson {
     }
 
     @PutMapping("/updateById/{id}")
-    public ResponseEntity<?> updateAddress(@PathVariable("id") Long id, @RequestBody @Valid PersonDto personDto) throws BusinessException {
+    public ResponseEntity<?> updatePerson(@PathVariable("id") Long id, @RequestBody @Valid PersonDto personDto) throws BusinessException {
         personService.update(id,personDto);
         return ResponseEntity.ok("Person updated successfully");
     }
