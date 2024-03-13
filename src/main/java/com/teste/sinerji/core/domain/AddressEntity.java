@@ -29,13 +29,14 @@ public class AddressEntity {
     @NotEmpty
     private String publicPlace;
 
-    @NotEmpty
-    private int number;
+
+    private Integer number;
 
     @NotEmpty
     private String zipCode;
 
     @OneToOne
+    @JoinColumn(name = "person_id")
     private PersonEntity person;
 
 

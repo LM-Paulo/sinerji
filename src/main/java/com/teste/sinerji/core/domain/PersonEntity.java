@@ -23,13 +23,12 @@ public class PersonEntity {
     @NotEmpty
     private String name;
 
-    @NotEmpty
     private Integer age;
 
     @NotEmpty
     private String sex;
 
-    @OneToOne
+    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL)
     private AddressEntity address;
 
     public void setEntity(PersonDto personDto) {
