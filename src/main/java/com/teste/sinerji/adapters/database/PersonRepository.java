@@ -12,8 +12,8 @@ import org.springframework.stereotype.Repository;
 public interface PersonRepository extends JpaRepository<PersonEntity, Long> {
 
     @Modifying
-    @Query("UPDATE PersonEntity a " +
-            "SET a.name = :name, a.age = :age, a.sex = :sex, a.address = :address WHERE a.id = :id")
+    @Query("UPDATE PersonEntity p " +
+            "SET p.name = :name, p.age = :age, p.sex = :sex, p.address = :address WHERE p.id = :id")
     void updatePersonById(@Param("id")Long id,@Param("name") String name,@Param("age") Integer age,
                           @Param("sex")String sex,@Param("address") AddressEntity address);
 }

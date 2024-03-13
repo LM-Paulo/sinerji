@@ -34,7 +34,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public void delete(Long id) throws BusinessException {
-        Optional<PersonEntity> person = Optional.ofNullable(repository.findById(id).orElseThrow(() -> new BusinessException("Address with ID '" + id + "' not found.")));
+        Optional<PersonEntity> person = Optional.ofNullable(repository.findById(id).orElseThrow(() -> new BusinessException("Person with ID '" + id + "' not found.")));
         this.repository.deleteById(person.get().getId());
 
     }
@@ -46,7 +46,7 @@ public class PersonServiceImpl implements PersonService {
         if (optionalPerson.isPresent()) {
             repository.updatePersonById(id, personDto.getName(), personDto.getAge(), personDto.getSex(), personDto.getAddress());
         } else {
-            throw new BusinessException("Address with ID " + id + " not found");
+            throw new BusinessException("Person with ID " + id + " not found");
         }
 
     }
