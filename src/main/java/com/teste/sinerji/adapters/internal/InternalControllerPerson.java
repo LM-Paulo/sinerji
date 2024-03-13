@@ -26,7 +26,7 @@ public class InternalControllerPerson {
 
     @PostMapping("/createPerson")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<?> createAddress(@RequestBody @Valid PersonDto personDto){
+    public ResponseEntity<?> createPerson(@RequestBody @Valid PersonDto personDto){
         personService.createPerson(personDto);
         return ResponseEntity.ok("Successfully created person");
     }
